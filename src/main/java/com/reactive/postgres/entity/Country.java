@@ -34,8 +34,8 @@ public class Country {
     @Column(nullable = false)
     private OffsetDateTime lastUpdate;
 
-    @OneToMany(mappedBy = "country")
-    private Set<City> countryCities;
+//    @OneToMany(mappedBy = "country")
+//    private Set<City> countryCities;
 
     public Integer getCountryId() {
         return countryId;
@@ -61,12 +61,12 @@ public class Country {
         this.lastUpdate = lastUpdate;
     }
 
-    public Set<City> getCountryCities() {
-        return countryCities;
-    }
-
-    public void setCountryCities(final Set<City> countryCities) {
-        this.countryCities = countryCities;
-    }
+//    public Set<City> getCountryCities() {
+//        return countryCities;
+//    }
+//
+//    public void setCountryCities(final Set<City> countryCities) {
+//        this.countryCities = countryCities;
+//    }
 
 }

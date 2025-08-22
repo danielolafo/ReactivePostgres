@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.reactive.postgres</groupId>
 	<artifactId>ReactivePostgres</artifactId>
-	<version>1.0</version>
+	<version>1.1</version>
 	<name>ReactivePostgres</name>
 	<description>Reactive test for PostgresSQL</description>
 	<url />
@@ -132,7 +132,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<version>3.5.3</version>
 		</dependency>
 	</dependencies>
 

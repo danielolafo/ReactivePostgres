@@ -13,7 +13,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 @Service
 public class JwtServiceImpl implements JwtService {
 
-	private final String secretKey = "mySecretKey"; // Secret for signing JWTs
+	private final String secretKey = "pvkppmldbhjfflqxcvpdymkmhbnxdyxqgezfpdksiwbarfdeblitxmjvdwmgqklpwndgzaxabchhxowvacjpdgcoacnplztbyipstwqgavhegevjmdbiczeeztwoiersrtkkrhwvmsabxbmkejdxhbytdttnchpbsucbfjuylxsfmjjzsumbhijnrxnrafkdgzcglcvacuhegonlzlrrzjhlmwnezrmlbgouezsfukngkyltltobllvpphngjswf"; // Secret for signing JWTs
     private final long expirationMs = 86400000; // Token validity (1 day)
 
     public String generateToken(String username) {
@@ -22,6 +22,7 @@ public class JwtServiceImpl implements JwtService {
                    .setIssuedAt(new Date())
                    .setExpiration(new Date(System.currentTimeMillis() + expirationMs))
                    .signWith(SignatureAlgorithm.HS256, secretKey)
+                   .claim("roles", "ROLE_USER")
                    .compact(); // Creates the token
     }
 

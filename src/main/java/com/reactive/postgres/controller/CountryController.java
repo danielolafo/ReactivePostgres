@@ -12,7 +12,8 @@ import reactor.core.publisher.Flux;
 
 @RestController
 @RequestMapping("/country")
-@CrossOrigin("http://localhost:4200")
+//@CrossOrigin("http://localhost:4200")
+@CrossOrigin("*")
 public class CountryController {
 	
 	private final CountryService countryService;

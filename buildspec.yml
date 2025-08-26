@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto11 # Or your desired Java version (e.g., corretto17)
+  pre_build:
+    commands:
+      - echo "Running pre-build commands..."
+      - mvn test # Run your unit tests
+  build:
+    commands:
+      - echo "Building the application..."
+      - mvn package # Package your Spring Boot application into a JAR file
+  post_build:
+    commands:
+      - echo "Build completed."
+
+artifacts:
+  files:
+    - target/*.jar # Include the generated JAR file as an artifact
+  discard-paths: yess

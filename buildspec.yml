@@ -19,4 +19,4 @@ phases:
 artifacts:
   files:
     - target/*.jar # Include the generated JAR file as an artifact
-  discard-paths: yess
+  discard-paths: yes
